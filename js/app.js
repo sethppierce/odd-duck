@@ -86,6 +86,7 @@ function handleClick(event){
   if(voteCount === 0){
     imgContainer.removeEventListener('click', handleClick);
     votesRemaining.innerHTML = 'Thank you for your input! Hit view results to see your votes!';
+    resultsBtn.id = ('resultsDone');
   }
 }
 

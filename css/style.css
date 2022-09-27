@@ -68,6 +68,14 @@ h1{
 #results-container::-webkit-scrollbar {
   display: none;
 }
+#resultsDone {
+  transition: 550ms;
+}
+#resultsDone:hover{
+  color: hotpink;
+  font-size: 40px;
+  cursor: pointer;
+}
 li {
   margin: 20px;
 }
@@ -112,6 +120,7 @@ li {
   border-style: outset;
   border-color: lime;
   border-width: 10px;
+  cursor: pointer;
 }
 #img-two {
   height: 20rem;
@@ -121,6 +130,7 @@ li {
   border-style: outset;
   border-color: lime;
   border-width: 10px;
+  cursor: pointer;
 }
 #img-three{
   height: 20rem;
@@ -131,6 +141,7 @@ li {
   border-style: outset;
   border-color: lime;
   border-width: 10px;
+  cursor: pointer;
 }
 
 footer {
