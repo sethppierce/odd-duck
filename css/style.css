@@ -1,5 +1,6 @@
 body {
   background-color: rgb(176, 213, 236);
+  --stagger-delay: 100ms;
 }
 
 #grid-container {
@@ -26,6 +27,9 @@ header{
   border-style: outset;
   border-color: lime;
   border-width: 10px;
+  animation: imgEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+  border-radius: 1000px;
 }
 
 h1{
@@ -33,6 +37,15 @@ h1{
   font-size: 80px;
   color: white;
   text-shadow: -3px -3px 0 green, 3px -3px 0 greenyellow, -3px 3px 0 greenyellow, 3px 3px 0 greenyellow;
+  animation: imgEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 400ms;
+}
+
+h2{
+  animation: imgEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 400ms;
 }
 
 #results {
@@ -52,6 +65,10 @@ h1{
   border-color: lime;
   border-width: 10px;
   padding-bottom: 40px;
+  animation: imgEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 200ms;
+  border-radius: 80px;
 }
 
 /* #myChart {
@@ -81,7 +98,10 @@ li {
   border-style: outset;
   border-color: lime;
   border-width: 10px;
-  
+  animation: imgEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 400ms;
+  border-radius: 100px;
 }
 #instructions {
   grid-area: 2 / 2 / 3 / 5;
@@ -101,6 +121,22 @@ li {
   padding-right: 20px;
   font-family: 'Press Start 2P', cursive;
   line-height: 20px;
+  animation: imgEntrance 700ms ease-in;
+  animation-fill-mode: backwards;
+  animation-delay: 400ms;
+  border-radius: 1000px;
+}
+
+
+@keyframes imgEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 #img-one{
@@ -113,7 +149,11 @@ li {
   border-color: lime;
   border-width: 10px;
   cursor: pointer;
+  animation: imgEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 400ms;
 }
+
 #img-two {
   height: 20rem;
   width: 20rem;
@@ -123,6 +163,9 @@ li {
   border-color: lime;
   border-width: 10px;
   cursor: pointer;
+  animation: imgEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 400ms;
 }
 #img-three{
   height: 20rem;
@@ -134,6 +177,9 @@ li {
   border-color: lime;
   border-width: 10px;
   cursor: pointer;
+  animation: imgEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+  animation-delay: 400ms;
 }
 
 footer {
