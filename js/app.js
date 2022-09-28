@@ -112,8 +112,19 @@ function handleClick(event){
     imgContainer.removeEventListener('click', handleClick);
     votesRemaining.innerHTML = 'Thank you for your input! Hit view results to see your votes!';
     resultsBtn.id = ('resultsDone');
+    let stringifiedDucks = JSON.stringify(duckArray);
+
+    console.log(stringifiedDucks);
+
+    localStorage.setItem('myDucks', stringifiedDucks);
   }
 }
+
+let retreivedDucks = localStorage.getItem('myDucks');
+console.log(retreivedDucks);
+let parsedDucks = JSON.parse(retreivedDucks);
+
+console.log('parsed Goats >>>', parsedDucks);
 
 function instructionP(){
   let pElem = document.createElement('p');
@@ -174,25 +185,29 @@ function handleShowResults() {
 
 // ****** EXECUTABLE CODE ********
 
-new Duck('sweep', 'png');
-new Duck('bag');
-new Duck('banana');
-new Duck('bathroom');
-new Duck('boots');
-new Duck('breakfast');
-new Duck('bubblegum');
-new Duck('chair');
-new Duck('cthulhu');
-new Duck('dog-duck');
-new Duck('dragon');
-new Duck('pen');
-new Duck('pet-sweep');
-new Duck('scissors');
-new Duck('shark');
-new Duck('tauntaun');
-new Duck('unicorn');
-new Duck('water-can');
-new Duck('wine-glass');
+if(retreivedDucks){
+  duckArray = parsedDucks;
+} else{
+  new Duck('sweep', 'png');
+  new Duck('bag');
+  new Duck('banana');
+  new Duck('bathroom');
+  new Duck('boots');
+  new Duck('breakfast');
+  new Duck('bubblegum');
+  new Duck('chair');
+  new Duck('cthulhu');
+  new Duck('dog-duck');
+  new Duck('dragon');
+  new Duck('pen');
+  new Duck('pet-sweep');
+  new Duck('scissors');
+  new Duck('shark');
+  new Duck('tauntaun');
+  new Duck('unicorn');
+  new Duck('water-can');
+  new Duck('wine-glass');
+}
 
 
 
